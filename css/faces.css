@@ -1,0 +1,176 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffdfb5;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center; /* 이미지와 글자가 세로로 정렬 */
+}
+
+header .logo h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px; /* 이미지와 글자 사이 간격 추가 */
+    text-align: center; /* 글자 정렬 */
+}
+
+.logo-img {
+    width: 120px; /* 이미지 크기를 더 크게 */
+    height: auto;
+    display: block;
+}
+
+nav {
+    background-color: #f69a30;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #f5f5f5;
+}
+
+/* 메인 섹션 스타일 */
+main {
+    margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 1000px;
+}
+
+.section {
+    background-color: #242424;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2em;
+    color: #e67e22;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section p {
+    font-size: 1.1em;
+    color: #f5f5f5;
+    line-height: 1.8;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    margin-top: 50px;
+}
+
+/* grid 스타일: 친구들 한마디 섹션 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.post-it {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #232323;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-it img {
+    width: 100px; /* 이미지 크기 조정 */
+    height: auto;
+    margin-bottom: 10px; /* 이미지와 텍스트 간격 */
+}
+
+.post-it p {
+    text-align: center;
+    font-weight: 600;
+    color: #d1d1d1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 1.8em;
+    }
+
+    .logo-img {
+        width: 100px; /* 모바일에서는 이미지 크기를 적절하게 조정 */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 작은 화면에서 컬럼 수를 줄임 */
+    }
+
+    .post-it img {
+        width: 80px; /* 모바일에서는 이미지 크기를 줄임 */
+    }
+}
